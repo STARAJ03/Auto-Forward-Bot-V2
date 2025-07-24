@@ -1,1 +1,1 @@
-
+RUN main.py

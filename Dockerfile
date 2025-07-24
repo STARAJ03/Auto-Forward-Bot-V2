@@ -10,4 +10,4 @@ RUN mkdir /fwdbot
 WORKDIR /fwdbot
 #COPY start.sh /start.sh
 #CMD ["/bin/bash", "/start.sh"] 
-CMD ["main.py"]
+CMD ["/bot.py"]

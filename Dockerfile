@@ -8,6 +8,11 @@ RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 RUN mkdir /fwdbot
 WORKDIR /fwdbot
-COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"] 
+#COPY start.sh /start.sh
+#CMD ["/bin/bash", "/start.sh"] 
 #CMD ["/bot.py"]
+# Copy your app code (including main.py)
+COPY main.py
+
+# Run main.py when container starts
+CMD ["python3", "main.py"]

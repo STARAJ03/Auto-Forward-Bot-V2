@@ -13,6 +13,6 @@ RUN pip install --upgrade pip && \
 # Set up application directory
 RUN mkdir /fwdbot
 WORKDIR /fwdbot
-
-COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"]
+RUN Procfile
+#COPY start.sh /start.sh
+#CMD ["/bin/bash", "/start.sh"]

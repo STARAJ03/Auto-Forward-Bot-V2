@@ -8,6 +8,6 @@ RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 RUN mkdir /fwdbot
 WORKDIR /fwdbot
-#COPY start.sh /start.sh
-#CMD ["/bin/bash", "/start.sh"] 
-CMD ["/bot.py"]
+COPY start.sh /start.sh
+CMD ["/bin/bash", "/start.sh"] 
+#CMD ["/bot.py"]

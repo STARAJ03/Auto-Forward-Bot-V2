@@ -1,1 +1,2 @@
-RUN main.py
+#!/bin/bash
+python3 /fwdbot/main.py

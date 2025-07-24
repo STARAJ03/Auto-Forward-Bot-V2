@@ -12,7 +12,6 @@ WORKDIR /fwdbot
 #CMD ["/bin/bash", "/start.sh"] 
 #CMD ["/bot.py"]
 # Copy your app code (including main.py)
-COPY main.py
-
+COPY main.py .
 # Run main.py when container starts
 CMD ["python3", "main.py"]

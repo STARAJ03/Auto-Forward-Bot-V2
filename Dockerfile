@@ -1,18 +1,12 @@
-FROM python:3.11-slim-bookworm
+FROM python:3.8-slim
 
-# Install system packages
-RUN apt update && apt upgrade -y && \
-    apt install -y git && \
-    apt clean
-
-# Copy and install Python dependencies
+RUN apt update && apt upgrade -y
+RUN apt install git -y
 COPY requirements.txt /requirements.txt
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r /requirements.txt
 
-# Set up application directory
+RUN cd /
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 RUN mkdir /fwdbot
 WORKDIR /fwdbot
-RUN Procfile
-#COPY start.sh /start.sh
-#CMD ["/bin/bash", "/start.sh"]
+COPY start.sh /start.sh
+CMD ["/bin/bash", "/start.sh"] 
